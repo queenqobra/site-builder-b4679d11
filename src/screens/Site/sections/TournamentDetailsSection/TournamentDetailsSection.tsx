@@ -1,26 +1,5 @@
 export const TournamentDetailsSection = (): JSX.Element => {
 
-  // Prize data (used in rendering below)
-  const _prizes = [
-    {
-      place: "1 МЕСТО - 6500 РУБЛЕЙ",
-      topClass: "top-[30.90%]",
-      heightClass: "h-[25.83%]",
-      textSizeClass: "text-[35px] tracking-[1.05px]",
-    },
-    {
-      place: "2 МЕСТО - 3500 РУБЛЕЙ",
-      topClass: "top-[45.30%]",
-      heightClass: "h-[31.41%]",
-      textSizeClass: "text-3xl tracking-[0.90px]",
-    },
-    {
-      place: "3 МЕСТО - 2000 РУБЛЕЙ",
-      topClass: "top-[61.80%]",
-      heightClass: "h-[25.83%]",
-      textSizeClass: "text-xl tracking-[0.60px]",
-    },
-  ];
 
   return (
     <section className="relative w-full flex flex-col">
