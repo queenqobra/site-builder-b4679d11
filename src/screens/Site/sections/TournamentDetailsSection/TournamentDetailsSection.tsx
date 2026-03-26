@@ -1,6 +1,6 @@
 export const TournamentDetailsSection = (): JSX.Element => {
-  // Info cards data
-  const infoCards = [
+  // Info cards data (used in rendering below)
+  const _infoCards = [
     {
       title: "формат турнира",
       titleShadow: "0px_0px_3.36px_#ffffff",
