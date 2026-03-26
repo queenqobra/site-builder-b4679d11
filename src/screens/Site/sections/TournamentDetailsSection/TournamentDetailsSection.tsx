@@ -102,8 +102,8 @@ export const TournamentDetailsSection = (): JSX.Element => {
     },
   ];
 
-  // Prize data
-  const prizes = [
+  // Prize data (used in rendering below)
+  const _prizes = [
     {
       place: "1 МЕСТО - 6500 РУБЛЕЙ",
       topClass: "top-[30.90%]",

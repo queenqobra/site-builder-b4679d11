@@ -1,25 +1,4 @@
 export const HeroBannerSection = (): JSX.Element => {
-  // Stats data for the three metrics displayed below the logo
-  const stats = [
-    {
-      label: "КОМАНДЫ",
-      value: "32",
-      valueExtra: null,
-      labelLeading: "leading-[74px]",
-    },
-    {
-      label: "Призовой фонд",
-      value: "12000",
-      valueExtra: "РУБ",
-      labelLeading: "leading-[33px]",
-    },
-    {
-      label: "завершенных игр",
-      value: "150+",
-      valueExtra: null,
-      labelLeading: "leading-[33px]",
-    },
-  ];
 
   return (
     <section className="relative w-full h-screen pt-[70px] overflow-hidden">

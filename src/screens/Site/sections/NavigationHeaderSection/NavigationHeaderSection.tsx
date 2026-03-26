@@ -24,7 +24,7 @@ const navItems = [
 ];
 
 export const NavigationHeaderSection = (): JSX.Element => {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [, setActiveItem] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex flex-col items-center bg-gradient-to-b from-black/70 to-transparent">
