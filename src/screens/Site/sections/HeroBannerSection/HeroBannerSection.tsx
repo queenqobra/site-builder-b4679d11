@@ -42,19 +42,22 @@ export const HeroBannerSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* ЗАВЕРШЕННЫХ */}
-        <div className="flex flex-col items-center gap-0">
-          <span className="font-literature text-[#ffffff57] text-[10px] tracking-[0.3px]">
-            МАТЧЕЙ
-          </span>
-          <span className="text-[#d3d3d3] text-[40px] leading-[40px] drop-shadow-[0_0_21px_#d3d3d3]" style={{ fontFamily: "'Antic Didone', serif" }}>
-            62
-            </span>
-            <span className="font-literature text-[#d3d3d3] text-[12px] sm:text-[14px] ml-1 drop-shadow-[0_0_10px_white]">
-              +1
-            </span>
-          </div>
-        </div>
+         {/* МАТЧЕЙ */}
+  <div className="flex flex-col items-center">
+    <span className="font-literature text-[#ffffff57] text-[10px] tracking-[0.3px]">
+      МАТЧЕЙ
+    </span>
+    <div className="flex items-baseline">
+      <span className="text-[#d3d3d3] text-[40px] leading-[40px] drop-shadow-[0_0_21px_#d3d3d3]" style={{ fontFamily: "'Antic Didone', serif" }}>
+        62
+      </span>
+      <span className="font-literature text-[#d3d3d3] text-[14px] ml-1 drop-shadow-[0_0_10px_white]">
+        +1
+      </span>
+    </div>
+  </div>
+
+</div>
 
       {/* CTA - УЧАСТВОВАТЬ */}
       <div className="mt-6">
@@ -78,4 +81,3 @@ export const HeroBannerSection = (): JSX.Element => {
     </div>
   );
 };
-
