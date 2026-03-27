@@ -15,78 +15,67 @@ export const HeroBannerSection = (): JSX.Element => {
   <div className="w-[700px] h-[1px] bg-red-600 opacity-70"></div>
   <div className="w-[700px] h-[1px] bg-red-600 opacity-40"></div>
 </div>
-
-      {/* Red decorative lines */}
-      <div className="flex flex-col items-center gap-1.5 w-full max-w-[700px] mt-2">
-        <div className="w-full h-[1px] bg-red-600 opacity-70" />
-        <div className="w-full h-[1px] bg-red-600 opacity-40" />
-      </div>
-
-      {/* Stats section - all same size, same height */}
-      <div className="flex items-start justify-center gap-8 sm:gap-16 mt-4">
+      {/* Stats section */}
+      <div className="flex items-center justify-center gap-16 scale-[1.5]">
         {/* КОМАНДЫ */}
-        <div className="flex flex-col items-center">
-          <span className="font-literature text-white/35 text-[10px] sm:text-[12px] tracking-[0.3px]">
+        <div className="flex flex-col items-center gap-0">
+          <span className="font-literature text-[#ffffff57] text-[10px] tracking-[0.3px]">
             КОМАНДЫ
           </span>
-          <span
-            className="text-[#d3d3d3] text-[28px] sm:text-[36px] leading-none drop-shadow-[0_0_15px_white]"
-            style={{ fontFamily: "'Antic Didone', serif" }}
-          >
+          <span className="text-[#d3d3d3] text-[32px] leading-[40px] drop-shadow-[0_0_21px_#d3d3d3]" style={{ fontFamily: "'Antic Didone', serif" }}>
             32
           </span>
         </div>
 
         {/* ПРИЗОВОЙ ФОНД */}
-        <div className="flex flex-col items-center">
-          <span className="font-literature text-white/35 text-[10px] sm:text-[12px] tracking-[0.3px]">
+        <div className="flex flex-col items-center gap-0">
+          <span className="font-literature text-[#ffffff57] text-[10px] tracking-[0.3px]">
             ПРИЗОВОЙ ФОНД
           </span>
           <div className="flex items-baseline">
-            <span
-              className="text-[#d3d3d3] text-[28px] sm:text-[36px] leading-none tracking-[1.2px] drop-shadow-[0_0_15px_white]"
-              style={{ fontFamily: "'Antic Didone', serif" }}
-            >
+            <span className="text-[#d3d3d3] text-[40px] tracking-[1.2px] leading-[40px] drop-shadow-[0_0_13px_#d3d3d3]" style={{ fontFamily: "'Antic Didone', serif" }}>
               12000
             </span>
-            <span className="font-literature text-[#d3d3d3] text-[12px] sm:text-[14px] ml-1 drop-shadow-[0_0_10px_white]">
+            <span className="font-literature text-[#d3d3d3] text-[15px] ml-1">
               РУБ
             </span>
           </div>
         </div>
 
-        {/* МАТЧЕЙ */}
-        <div className="flex flex-col items-center">
-          <span className="font-literature text-white/35 text-[10px] sm:text-[12px] tracking-[0.3px]">
+        {/* ЗАВЕРШЕННЫХ */}
+        <div className="flex flex-col items-center gap-0">
+          <span className="font-literature text-[#ffffff57] text-[10px] tracking-[0.3px]">
             МАТЧЕЙ
           </span>
-          <div className="flex items-baseline">
-            <span
-              className="text-[#d3d3d3] text-[28px] sm:text-[36px] leading-none drop-shadow-[0_0_15px_white]"
-              style={{ fontFamily: "'Antic Didone', serif" }}
-            >
-              62
+          <span className="text-[#d3d3d3] text-[40px] leading-[40px] drop-shadow-[0_0_21px_#d3d3d3]" style={{ fontFamily: "'Antic Didone', serif" }}>
+            62
             </span>
             <span className="font-literature text-[#d3d3d3] text-[12px] sm:text-[14px] ml-1 drop-shadow-[0_0_10px_white]">
               +1
             </span>
           </div>
         </div>
-      </div>
 
       {/* CTA - УЧАСТВОВАТЬ */}
-      <div className="mt-4 sm:mt-6">
-        <span className="bg-[linear-gradient(134deg,#420200_0%,#ff0600_35%,#370000_50%,#ff0600_65%,#420200_100%)] bg-[length:300%_100%] bg-clip-text text-transparent font-kudry text-[40px] sm:text-[65px] md:text-[85px] cursor-pointer animate-[shineSmooth_15s_linear_infinite] hover:scale-[1.08] transition-transform duration-300">
+      <div className="mt-6">
+        <span className="bg-[linear-gradient(134deg,#420200_0%,#ff0600_35%,#370000_50%,#ff0600_65%,#420200_100%)] 
+        bg-[length:300%_100%]
+        bg-clip-text text-transparent 
+        font-kudry text-[85px] 
+         cursor-pointer animate-[shineSmooth_15s_linear_infinite]
+         hover:scale-[1.08] transition-transform duration-300 
+        ">
           УЧАСТВОВАТЬ
         </span>
       </div>
 
       {/* Subtitle */}
-      <div className="mt-3 sm:mt-5">
-        <span className="font-labor text-[#a7a7a7] text-[14px] sm:text-[20px] tracking-[0.9px]">
+      <div className="mt-[20px]">
+        <span className="font-labor text-[#a7a7a7] text-[20px] tracking-[0.9px]">
           Докажи своё превосходство
         </span>
       </div>
     </div>
   );
 };
+
