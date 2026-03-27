@@ -7,20 +7,8 @@ import {
 } from "../../../../components/ui/navigation-menu";
 
 const navItems = [
-  {
-    label: "ВХОД",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
-  },
-  { label: "СЕТКА",
-   fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]" },
-  {
-    label: "ТУРНИРЫ",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
-  },
-  {
-    label: "ПРОФИЛЬ",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
-  },
+  { label: "СЕТКА", href: "#grid" },
+  { label: "ИНФОРМАЦИЯ", href: "#info" },
 ];
 
 export const NavigationHeaderSection = (): JSX.Element => {
@@ -34,12 +22,14 @@ export const NavigationHeaderSection = (): JSX.Element => {
           <NavigationMenuList className="flex items-center gap-[18vw]">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
-                <NavigationMenuLink
-                  className={`flex items-center justify-center w-[70px] h-[30px] ${item.fontFamily} text-white text-[15px] min-text-[10px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent`}
-                  onClick={() => setActiveItem(item.label)}
-                  style={{ textDecoration: "none" }}
-                >
-                  {item.label}
+                <NavigationMenuLink asChild>
+                  <a
+                    href={item.href}
+                    className="flex items-center justify-center w-[500px] h-[30px] font-literature text-white text-[15px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent"
+                    onClick={() => setActiveItem(item.label)}
+                  >
+                    {item.label}
+                  </a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
