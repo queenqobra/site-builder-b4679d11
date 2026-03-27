@@ -10,64 +10,54 @@ export const Site = (): JSX.Element => {
   };
 
   return (
-    <div className="relative bg-black min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col">
       {/* Fixed navigation */}
       <NavigationHeaderSection />
 
-      {/* Hero section with background */}
-      <section className="relative w-full h-screen overflow-hidden">
-        {/* Background image - fills entire hero */}
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        {/* ФОН */}
         <img
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Background"
           src="/1background.png"
+          className="absolute top-0 left-0 w-full h-auto z-0 pointer-events-none"
+          alt="Background"
         />
 
-        {/* Side decorations */}
+        {/* ДЕКОР */}
         <img
-          className="absolute top-0 left-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 pointer-events-none"
-          alt="Left decoration"
+          className="absolute top-0 left-0 w-[25vw] max-w-[460px] z-10 pointer-events-none"
           src="/side-decor.png"
+          alt="Left decoration"
         />
         <img
-          className="absolute top-0 right-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 scale-x-[-1]"
-          alt="Right decoration"
+          className="absolute top-0 right-0 w-[25vw] max-w-[460px] z-10 scale-x-[-1]"
           src="/side-decor.png"
+          alt="Right decoration"
         />
 
         {/* Top dark gradient */}
-        <div className="absolute top-0 left-0 w-full h-[25%] bg-gradient-to-b from-black via-black/70 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[50%] bg-gradient-to-b from-black via-black/20 to-transparent z-10 pointer-events-none" />
 
-        {/* Bottom gradient to black */}
-        <div className="absolute bottom-0 left-0 w-full h-[35%] bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none" />
-
-        {/* Clouds at the very bottom */}
-        <img
-          className="absolute bottom-0 left-0 w-full h-auto object-cover z-[5] pointer-events-none opacity-60"
-          alt="Clouds"
-          src="/clouds.webp"
-        />
-
-        {/* Hero content centered */}
-        <div className="absolute inset-0 z-20 flex items-center justify-center pt-[60px]">
+        {/* HERO */}
+        <div className="relative z-20">
           <HeroBannerSection />
         </div>
       </section>
 
       {/* Main content */}
-      <main className="flex-1 bg-black relative z-10">
+      <main className="flex-1 relative z-10">
         <TournamentDetailsSection />
         <TournamentBracketSection />
       </main>
 
-      {/* Footer */}
-      <SocialMediaFooterSection />
+      <div className="relative">
+        <div
+          onClick={scrollToTop}
+          className="absolute right-6 bottom-[20px] w-12 h-12 bg-[url(/arrow.png)] bg-contain bg-no-repeat z-50 cursor-pointer hover:scale-110 transition"
+          style={{ filter: "drop-shadow(0 0 10px white)" }}
+        />
+      </div>
 
-      {/* Arrow scroll-to-top */}
-      <div
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-8 h-[31px] bg-[url(/arrow.png)] bg-[100%_100%] z-50 cursor-pointer hover:opacity-80 transition-opacity"
-      />
+      <SocialMediaFooterSection />
     </div>
   );
 };
